@@ -8,11 +8,14 @@ const devisUrl = "https://www.caseo-maison.com/devis";
 const mapsUrl = "https://maps.app.goo.gl/hsRmYYPDsB5QcNK98";
 const mapsEmbedUrl =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2775923.340662299!2d1.4331651417110982!3d47.19970105736059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ba7f4992eba1f%3A0x9ea3fb9aab31d495!2zQ0FTw4lPIENoYW1iw6lyeQ!5e0!3m2!1sfr!2sfr!4v1776328547399!5m2!1sfr!2sfr";
-const reviewsUrl =
-  "https://www.caseo-maison.com/avis-clients/magasins/avis-caseo-chambery-85";
 
 const phoneDisplay = "04 79 34 48 52";
 const phoneLink = "tel:+33479344852";
+
+const showroomImage = "/images/showroom-caseo-chambery.jpeg";
+const magasinImage = "/images/magasin-caseo-chambery.jpeg";
+const fenetreImage = "/images/moustiquaire-magasin-fenetre.jpeg.jpeg";
+const baieImage = "/images/moustiquaire-magasin-baie-vitree.jpeg.jpeg";
 
 const openingHours = [
   { day: "Lundi", hours: "08h00-12h00 / 13h30-18h00" },
@@ -42,12 +45,16 @@ const solutions = [
     desc: "La solution la plus demandée pour les fenêtres. Facile à ouvrir, discrète une fois relevée, durable au quotidien.",
     ideal:
       "Idéale pour chambre, cuisine, salle de bain et fenêtres fréquemment ouvertes",
+    image: fenetreImage,
+    alt: "Moustiquaire de fenêtre installée en magasin",
   },
   {
     num: "02",
     title: "Moustiquaire plissée",
     desc: "Parfaite pour les portes-fenêtres et baies vitrées. Ouverture latérale souple, faible encombrement et excellent confort d’usage.",
     ideal: "Idéale pour terrasse, jardin, balcon et grandes ouvertures",
+    image: baieImage,
+    alt: "Moustiquaire de baie vitrée présentée en magasin",
   },
   {
     num: "03",
@@ -154,7 +161,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   name: "Caséo Chambéry - Menuiserie Diffusion",
-  image: canonicalUrl,
+  image: showroomImage,
   url: canonicalUrl,
   telephone: "+33479344852",
   description:
@@ -192,7 +199,7 @@ const localBusinessSchema = {
     name: "Caséo",
     url: "https://www.caseo-maison.com/",
   },
-  sameAs: [showroomUrl, mapsUrl, reviewsUrl],
+  sameAs: [showroomUrl, mapsUrl],
 };
 
 const faqSchema = {
@@ -236,6 +243,7 @@ export default function Home() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={showroomImage} />
         <meta name="theme-color" content="#f48221" />
         <link rel="canonical" href={canonicalUrl} />
         <script
@@ -326,45 +334,55 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hero-panel">
-              <div className="hero-panel-label">Votre showroom local</div>
-              <div className="hero-panel-title">
-                Un projet simple, clair et bien accompagné
+            <div className="hero-side">
+              <div className="hero-showroom-shot">
+                <img
+                  src={showroomImage}
+                  alt="Showroom Caséo Chambéry"
+                  loading="eager"
+                />
               </div>
-              <p className="hero-panel-text">
-                Venez voir les modèles au showroom Caséo Chambéry ou faites
-                directement votre demande en ligne pour être recontacté.
-              </p>
 
-              <div className="hero-panel-box">
-                <p>
-                  <strong>Menuiserie Diffusion</strong>
-                  <br />
-                  381 Avenue de Villarcher
-                  <br />
-                  73000 Chambéry
+              <div className="hero-panel">
+                <div className="hero-panel-label">Votre showroom local</div>
+                <div className="hero-panel-title">
+                  Un projet simple, clair et bien accompagné
+                </div>
+                <p className="hero-panel-text">
+                  Venez voir les modèles au showroom Caséo Chambéry ou faites
+                  directement votre demande en ligne pour être recontacté.
                 </p>
-                <a href={phoneLink}>{phoneDisplay}</a>
-              </div>
 
-              <div className="hero-panel-actions">
-                <a href={devisUrl} className="btn btn-primary">
-                  Demander un devis
-                </a>
-                <a
-                  href={mapsUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-dark-outline"
-                >
-                  Voir l’itinéraire
-                </a>
-              </div>
+                <div className="hero-panel-box">
+                  <p>
+                    <strong>Menuiserie Diffusion</strong>
+                    <br />
+                    381 Avenue de Villarcher
+                    <br />
+                    73000 Chambéry
+                  </p>
+                  <a href={phoneLink}>{phoneDisplay}</a>
+                </div>
 
-              <div className="zone-pills">
-                {zones.map((z) => (
-                  <span key={z}>{z}</span>
-                ))}
+                <div className="hero-panel-actions">
+                  <a href={devisUrl} className="btn btn-primary">
+                    Demander un devis
+                  </a>
+                  <a
+                    href={mapsUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-dark-outline"
+                  >
+                    Voir l’itinéraire
+                  </a>
+                </div>
+
+                <div className="zone-pills">
+                  {zones.map((z) => (
+                    <span key={z}>{z}</span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -439,10 +457,22 @@ export default function Home() {
             <div className="solutions-grid">
               {solutions.map((s) => (
                 <article key={s.num} className="solution-card">
-                  <div className="solution-num">{s.num}</div>
-                  <h3>{s.title}</h3>
-                  <p>{s.desc}</p>
-                  <span>{s.ideal}</span>
+                  {s.image ? (
+                    <div className="solution-media">
+                      <img src={s.image} alt={s.alt} loading="lazy" />
+                    </div>
+                  ) : (
+                    <div className="solution-media solution-media-placeholder">
+                      <span>Protection discrète et durable</span>
+                    </div>
+                  )}
+
+                  <div className="solution-body">
+                    <div className="solution-num">{s.num}</div>
+                    <h3>{s.title}</h3>
+                    <p>{s.desc}</p>
+                    <span>{s.ideal}</span>
+                  </div>
                 </article>
               ))}
             </div>
@@ -583,12 +613,12 @@ export default function Home() {
                 <span>Caséo Chambéry</span>
               </div>
               <a
-                href={reviewsUrl}
+                href={mapsUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-secondary"
               >
-                Voir tous les avis
+                Voir les avis Google
               </a>
             </div>
 
@@ -605,7 +635,7 @@ export default function Home() {
                   <p className="review-date">{review.date}</p>
                   <p className="review-text">“{review.text}”</p>
                   <a
-                    href={reviewsUrl}
+                    href={mapsUrl}
                     target="_blank"
                     rel="noreferrer"
                     className="review-link"
@@ -646,6 +676,18 @@ export default function Home() {
               Tous les accès utiles sont ici : téléphone, demande de devis,
               carte du magasin et horaires du showroom.
             </p>
+
+            <div className="local-gallery-card">
+              <img
+                src={magasinImage}
+                alt="Magasin Caséo Chambéry"
+                loading="lazy"
+              />
+              <div className="local-gallery-overlay">
+                <span>Magasin Caséo Chambéry</span>
+                <strong>Découvrez le showroom et les modèles exposés</strong>
+              </div>
+            </div>
 
             <div className="local-grid">
               <div className="map-card">
