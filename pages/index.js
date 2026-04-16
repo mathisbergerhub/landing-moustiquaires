@@ -21,149 +21,149 @@ const openingHours = [
   { day: "Jeudi", hours: "08h00-12h00 / 13h30-18h00" },
   { day: "Vendredi", hours: "08h00-12h00 / 13h30-18h00" },
   { day: "Samedi", hours: "09h00-13h00" },
-  { day: "Dimanche", hours: "Ferme" },
+  { day: "Dimanche", hours: "Fermé" },
 ];
 
 const zones = [
-  "Chambery",
-  "Voglans",
+  "Chambéry",
   "La Motte-Servolex",
   "Bassens",
   "Cognin",
   "Barberaz",
   "Aix-les-Bains",
   "Le Bourget-du-Lac",
+  "Voglans",
 ];
 
 const solutions = [
   {
     num: "01",
     title: "Moustiquaire enroulable",
-    desc: "La solution la plus demandee pour les fenetres. Facile a ouvrir, discrete une fois relevee, durable au quotidien.",
+    desc: "La solution la plus demandée pour les fenêtres. Facile à ouvrir, discrète une fois relevée, durable au quotidien.",
     ideal:
-      "Ideale pour chambre, cuisine, salle de bain et fenetres frequemment ouvertes",
+      "Idéale pour chambre, cuisine, salle de bain et fenêtres fréquemment ouvertes",
   },
   {
     num: "02",
-    title: "Moustiquaire plissee",
-    desc: "Parfaite pour les portes-fenetres et baies vitrees. Ouverture laterale souple, faible encombrement et excellent confort d'usage.",
-    ideal: "Ideale pour terrasse, jardin, balcon et grandes ouvertures",
+    title: "Moustiquaire plissée",
+    desc: "Parfaite pour les portes-fenêtres et baies vitrées. Ouverture latérale souple, faible encombrement et excellent confort d’usage.",
+    ideal: "Idéale pour terrasse, jardin, balcon et grandes ouvertures",
   },
   {
     num: "03",
     title: "Moustiquaire fixe",
-    desc: "Une solution simple, propre et durable pour les ouvertures peu sollicitees. Protection permanente sans manipulation.",
-    ideal: "Ideale pour cave, veranda, cellier et fenetres peu utilisees",
+    desc: "Une solution simple, propre et durable pour les ouvertures peu sollicitées. Protection permanente sans manipulation.",
+    ideal: "Idéale pour cave, véranda, cellier et fenêtres peu utilisées",
   },
 ];
 
 const reasons = [
   {
     number: "01",
-    title: "Showroom local a Chambery",
-    text: "Vous pouvez voir les modeles, comparer les finitions et echanger avec une equipe proche de chez vous.",
+    title: "Showroom local à Chambéry",
+    text: "Vous pouvez voir les modèles, comparer les finitions et échanger avec une équipe proche de chez vous.",
   },
   {
     number: "02",
-    title: "Prise de mesures a domicile",
-    text: "Nous prenons les mesures sur place pour vous orienter vers la moustiquaire la plus adaptee a vos ouvertures.",
+    title: "Prise de mesures à domicile",
+    text: "Nous prenons les mesures sur place pour vous orienter vers la moustiquaire la plus adaptée à vos ouvertures.",
   },
   {
     number: "03",
     title: "Fabrication sur mesure",
-    text: "Chaque moustiquaire est fabriquee selon vos cotes pour un rendu net, precis et fiable dans le temps.",
+    text: "Chaque moustiquaire est fabriquée selon vos cotes pour un rendu net, précis et fiable dans le temps.",
   },
   {
     number: "04",
-    title: "Pose soignee par nos techniciens",
-    text: "Installation propre, reglages, verifications et conseils d'utilisation : vous repartez avec une solution prete a l'emploi.",
+    title: "Pose soignée par nos techniciens",
+    text: "Installation propre, réglages, vérifications et conseils d’utilisation : vous repartez avec une solution prête à l’emploi.",
   },
 ];
 
 const painPoints = [
-  "Vous n'ouvrez plus les fenetres a cause des moustiques",
-  "Les solutions temporaires tiennent mal ou sont peu esthetiques",
-  "Vous voulez garder l'air frais sans laisser entrer les insectes",
-  "Vous cherchez une solution durable, propre et adaptee a vos menuiseries",
+  "Vous n’ouvrez plus les fenêtres à cause des moustiques",
+  "Les solutions temporaires tiennent mal ou sont peu esthétiques",
+  "Vous voulez garder l’air frais sans laisser entrer les insectes",
+  "Vous cherchez une solution durable, propre et adaptée à vos menuiseries",
 ];
 
 const benefits = [
-  "Confort d'ete sans moustiques ni insectes",
-  "Aeration naturelle de votre logement",
-  "Solution discrete et esthetique",
-  "Compatible avec fenetres, portes-fenetres et baies vitrees",
+  "Confort d’été sans moustiques ni insectes",
+  "Aération naturelle de votre logement",
+  "Solution discrète et esthétique",
+  "Compatible avec fenêtres, portes-fenêtres et baies vitrées",
   "Fabrication sur mesure",
-  "Pose professionnelle a Chambery et alentours",
+  "Pose professionnelle à Chambéry et alentours",
 ];
 
 const reviews = [
   {
-    name: "karine routin",
+    name: "Thomas Jacquignon",
     rating: "5/5",
-    date: "4 novembre 2025",
-    text: "Tres professionnel",
+    date: "il y a un mois",
+    text: "Excellente expérience du début à la fin. Très bons conseils de Sébastien pour le remplacement de ma porte d’entrée. Installation impeccable réalisée par Jean-Claude, avec l’aide de Sébastien. Je recommande !",
   },
   {
-    name: "PATRICIA RENAUD",
+    name: "Manon Malavasi",
     rating: "5/5",
-    date: "6 juin 2025",
-    text: "Je suis tout a fait satisfaite. Jean-Claude a ete efficace, fiable et tres agreable.",
+    date: "il y a un mois",
+    text: "Super projet. Nous sommes ravis de notre nouvelle porte d'entrée. Équipe top. Séb le commercial et JC le poseur sans oublier la très gentille Emma au téléphone.",
   },
   {
-    name: "Verdoia Jean Daniel",
+    name: "Laurence Maranzoni",
     rating: "5/5",
-    date: "20 fevrier 2024",
-    text: "Tres bon rapport qualite prix, le service est excellent et les materiaux de bonne qualites. Je recommande les yeux fermes car je suis satisfait du resultat.",
+    date: "il y a 4 mois",
+    text: "Nous avons changé notre très vieux volet roulant de notre baie vitrée. Ayant déjà eu une bonne expérience avec Caseo, nous avons choisi de refaire appel à leur service. De l'accueil magasin jusqu'à la pose, tout était parfait. Merci beaucoup.",
   },
 ];
 
 const faqs = [
   {
-    question: "Quel type de moustiquaire choisir pour ma fenetre a Chambery ?",
+    question: "Quel type de moustiquaire choisir pour ma fenêtre à Chambéry ?",
     answer:
-      "Pour une fenetre standard, la moustiquaire enroulable est souvent le meilleur choix. Pour une porte-fenetre ou une baie vitree, la moustiquaire plissee est generalement la plus confortable a l'usage.",
+      "Pour une fenêtre standard, la moustiquaire enroulable est souvent le meilleur choix. Pour une porte-fenêtre ou une baie vitrée, la moustiquaire plissée est généralement la plus confortable à l’usage.",
   },
   {
-    question: "Proposez-vous la pose de moustiquaire a Chambery et autour ?",
+    question: "Proposez-vous la pose de moustiquaire à Chambéry et autour ?",
     answer:
-      "Oui. Caseo Chambery intervient pour la prise de mesures, la fabrication sur mesure et la pose de moustiquaires a Chambery ainsi que dans les communes voisines.",
+      "Oui. Caséo Chambéry intervient pour la prise de mesures, la fabrication sur mesure et la pose de moustiquaires à Chambéry ainsi que dans les communes voisines.",
   },
   {
-    question: "Faut-il forcement une moustiquaire sur mesure ?",
+    question: "Faut-il forcément une moustiquaire sur mesure ?",
     answer:
-      "Pour obtenir une finition propre, une bonne tenue dans le temps et un usage confortable, le sur mesure est generalement la meilleure solution, surtout pour les portes-fenetres et baies vitrees.",
+      "Pour obtenir une finition propre, une bonne tenue dans le temps et un usage confortable, le sur mesure est généralement la meilleure solution, surtout pour les portes-fenêtres et baies vitrées.",
   },
   {
-    question: "Combien coute une moustiquaire sur mesure ?",
+    question: "Combien coûte une moustiquaire sur mesure ?",
     answer:
-      "Le prix depend du type de moustiquaire, des dimensions, du nombre d'ouvertures et du niveau de finition souhaite. Le plus simple est de demander un devis gratuit pour obtenir un chiffrage adapte a votre projet.",
+      "Le prix dépend du type de moustiquaire, des dimensions, du nombre d’ouvertures et du niveau de finition souhaité. Le plus simple est de demander un devis gratuit pour obtenir un chiffrage adapté à votre projet.",
   },
   {
     question: "Comment se passe la prise de mesures ?",
     answer:
-      "Apres votre demande, l'equipe Caseo Chambery vous recontacte pour qualifier votre besoin. Un technicien peut ensuite se deplacer chez vous pour mesurer precisement vos ouvertures avant fabrication.",
+      "Après votre demande, l’équipe Caséo Chambéry vous recontacte pour qualifier votre besoin. Un technicien peut ensuite se déplacer chez vous pour mesurer précisément vos ouvertures avant fabrication.",
   },
   {
-    question: "Quels sont les horaires du showroom Caseo Chambery ?",
+    question: "Quels sont les horaires du showroom Caséo Chambéry ?",
     answer:
-      "Le showroom est ouvert du lundi au vendredi de 08h00 a 12h00 puis de 13h30 a 18h00, et le samedi de 09h00 a 13h00.",
+      "Le showroom est ouvert du lundi au vendredi de 08h00 à 12h00 puis de 13h30 à 18h00, et le samedi de 09h00 à 13h00.",
   },
 ];
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
-  name: "Caseo Chambery - Menuiserie Diffusion",
+  name: "Caséo Chambéry - Menuiserie Diffusion",
   image: canonicalUrl,
   url: canonicalUrl,
   telephone: "+33479344852",
   description:
-    "Caseo Chambery installe des moustiquaires sur mesure pour fenetres, portes-fenetres et baies vitrees a Chambery et dans les communes alentours.",
+    "Caséo Chambéry installe des moustiquaires sur mesure pour fenêtres, portes-fenêtres et baies vitrées à Chambéry et dans les communes alentours.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "381 Avenue de Villarcher",
     postalCode: "73000",
-    addressLocality: "Chambery",
+    addressLocality: "Chambéry",
     addressCountry: "FR",
   },
   areaServed: zones.map((city) => ({ "@type": "City", name: city })),
@@ -189,7 +189,7 @@ const localBusinessSchema = {
   ],
   parentOrganization: {
     "@type": "Organization",
-    name: "Caseo",
+    name: "Caséo",
     url: "https://www.caseo-maison.com/",
   },
   sameAs: [showroomUrl, mapsUrl, reviewsUrl],
@@ -215,12 +215,12 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Moustiquaire sur mesure a Chambery avec pose | Devis gratuit | Caseo
-          Chambery
+          Moustiquaire sur mesure à Chambéry avec pose | Devis gratuit | Caséo
+          Chambéry
         </title>
         <meta
           name="description"
-          content="Caseo Chambery installe votre moustiquaire sur mesure a Chambery : fenetres, portes-fenetres et baies vitrees. Devis gratuit, prise de mesures a domicile et pose professionnelle."
+          content="Caséo Chambéry installe votre moustiquaire sur mesure à Chambéry : fenêtres, portes-fenêtres et baies vitrées. Devis gratuit, prise de mesures à domicile et pose professionnelle."
         />
         <meta
           name="robots"
@@ -228,11 +228,11 @@ export default function Home() {
         />
         <meta
           property="og:title"
-          content="Moustiquaire sur mesure a Chambery avec pose | Caseo Chambery"
+          content="Moustiquaire sur mesure à Chambéry avec pose | Caséo Chambéry"
         />
         <meta
           property="og:description"
-          content="Fenetres, portes-fenetres, baies vitrees : demandez votre devis gratuit pour une moustiquaire sur mesure a Chambery."
+          content="Fenêtres, portes-fenêtres, baies vitrées : demandez votre devis gratuit pour une moustiquaire sur mesure à Chambéry."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -257,14 +257,14 @@ export default function Home() {
           <a href="#top" className="logo">
             <div className="logo-badge">C</div>
             <div className="logo-text">
-              <strong>Caseo Chambery</strong>
+              <strong>Caséo Chambéry</strong>
               <span>Moustiquaires sur mesure</span>
             </div>
           </a>
 
           <nav className="nav">
             <a href="#solutions">Solutions</a>
-            <a href="#pourquoi">Pourquoi Caseo</a>
+            <a href="#pourquoi">Pourquoi Caséo</a>
             <a href="#local">Magasin</a>
             <a href="#faq">FAQ</a>
             <a href={devisUrl} className="btn btn-primary nav-cta">
@@ -279,26 +279,24 @@ export default function Home() {
           <div className="container hero-grid">
             <div className="hero-copy">
               <div className="hero-topline">
-                <span className="hero-tag">Caseo Chambery - Voglans</span>
-                <span className="hero-review-badge">
-                  Avis clients visibles en ligne
-                </span>
+                <span className="hero-tag">Caséo Chambéry</span>
+                <span className="hero-review-badge">4,5/5 · 84 avis Google</span>
               </div>
 
               <h1>
-                Moustiquaire sur mesure a Chambery avec pose
+                Moustiquaire sur mesure à Chambéry avec pose
                 <span> Devis gratuit</span>
               </h1>
 
               <p className="hero-text">
-                Fenetres, portes-fenetres, baies vitrees : protegez votre maison
-                des moustiques tout l'ete sans renoncer a l'air frais. Caseo
-                Chambery prend les mesures, fabrique et pose votre moustiquaire
+                Fenêtres, portes-fenêtres, baies vitrées : protégez votre maison
+                des moustiques tout l’été sans renoncer à l’air frais. Caséo
+                Chambéry prend les mesures, fabrique et pose votre moustiquaire
                 sur mesure.
               </p>
 
               <div className="hero-points">
-                <span>Prise de mesures a domicile</span>
+                <span>Prise de mesures à domicile</span>
                 <span>Fabrication sur vos cotes</span>
                 <span>Pose par nos techniciens</span>
               </div>
@@ -319,11 +317,11 @@ export default function Home() {
                 </div>
                 <div className="stat-card">
                   <strong>Local</strong>
-                  <span>showroom a Chambery</span>
+                  <span>showroom à Chambéry</span>
                 </div>
                 <div className="stat-card">
                   <strong>Pose pro</strong>
-                  <span>installation soignee</span>
+                  <span>installation soignée</span>
                 </div>
               </div>
             </div>
@@ -331,11 +329,11 @@ export default function Home() {
             <div className="hero-panel">
               <div className="hero-panel-label">Votre showroom local</div>
               <div className="hero-panel-title">
-                Un projet simple, clair et bien accompagne
+                Un projet simple, clair et bien accompagné
               </div>
               <p className="hero-panel-text">
-                Venez voir les modeles au showroom Caseo Chambery ou faites
-                directement votre demande en ligne pour etre recontacte.
+                Venez voir les modèles au showroom Caséo Chambéry ou faites
+                directement votre demande en ligne pour être recontacté.
               </p>
 
               <div className="hero-panel-box">
@@ -344,7 +342,7 @@ export default function Home() {
                   <br />
                   381 Avenue de Villarcher
                   <br />
-                  73000 Chambery
+                  73000 Chambéry
                 </p>
                 <a href={phoneLink}>{phoneDisplay}</a>
               </div>
@@ -359,7 +357,7 @@ export default function Home() {
                   rel="noreferrer"
                   className="btn btn-dark-outline"
                 >
-                  Voir l'itineraire
+                  Voir l’itinéraire
                 </a>
               </div>
 
@@ -377,15 +375,15 @@ export default function Home() {
             <div className="trust-item">
               <div className="trust-number">01</div>
               <div>
-                <strong>Prise de mesures a domicile</strong>
-                <span>Des conseils adaptes a votre logement</span>
+                <strong>Prise de mesures à domicile</strong>
+                <span>Des conseils adaptés à votre logement</span>
               </div>
             </div>
             <div className="trust-item">
               <div className="trust-number">02</div>
               <div>
                 <strong>Fabrication sur mesure</strong>
-                <span>Une moustiquaire adaptee a chaque ouverture</span>
+                <span>Une moustiquaire adaptée à chaque ouverture</span>
               </div>
             </div>
             <div className="trust-item">
@@ -401,13 +399,13 @@ export default function Home() {
         <section className="section section-soft">
           <div className="container problem-grid">
             <div className="problem-copy">
-              <p className="section-tag">Le probleme le plus frequent</p>
-              <h2>Marre des moustiques des que vous ouvrez les fenetres ?</h2>
+              <p className="section-tag">Le problème le plus fréquent</p>
+              <h2>Marre des moustiques dès que vous ouvrez les fenêtres ?</h2>
               <p className="section-text">
-                En ete, beaucoup de foyers n'osent plus aerer correctement leur
-                logement a cause des moustiques et autres insectes. Les
-                solutions temporaires sont souvent peu esthetiques, peu solides
-                et peu pratiques a utiliser au quotidien.
+                En été, beaucoup de foyers n’osent plus aérer correctement leur
+                logement à cause des moustiques et autres insectes. Les
+                solutions temporaires sont souvent peu esthétiques, peu solides
+                et peu pratiques à utiliser au quotidien.
               </p>
             </div>
 
@@ -431,11 +429,11 @@ export default function Home() {
         <section id="solutions" className="section">
           <div className="container">
             <p className="section-tag">Nos solutions</p>
-            <h2>Des moustiquaires adaptees a chaque ouverture</h2>
+            <h2>Des moustiquaires adaptées à chaque ouverture</h2>
             <p className="section-text">
-              Caseo Chambery vous accompagne pour choisir la bonne solution
-              selon votre usage, le type d'ouverture et le niveau de confort
-              recherche.
+              Caséo Chambéry vous accompagne pour choisir la bonne solution
+              selon votre usage, le type d’ouverture et le niveau de confort
+              recherché.
             </p>
 
             <div className="solutions-grid">
@@ -454,11 +452,11 @@ export default function Home() {
         <section className="section section-soft">
           <div className="container">
             <p className="section-tag">Les avantages</p>
-            <h2>Pourquoi installer une moustiquaire sur mesure a Chambery ?</h2>
+            <h2>Pourquoi installer une moustiquaire sur mesure à Chambéry ?</h2>
             <p className="section-text">
-              Une moustiquaire bien choisie vous permet de profiter de l'air
-              frais sans subir les insectes, tout en gardant une integration
-              propre et discrete a vos menuiseries.
+              Une moustiquaire bien choisie vous permet de profiter de l’air
+              frais sans subir les insectes, tout en gardant une intégration
+              propre et discrète à vos menuiseries.
             </p>
 
             <div className="benefits-grid">
@@ -475,23 +473,21 @@ export default function Home() {
         <section id="pourquoi" className="section">
           <div className="container why-grid">
             <div>
-              <p className="section-tag">Pourquoi choisir Caseo Chambery</p>
-              <h2>Un showroom local, une equipe qui se deplace</h2>
+              <p className="section-tag">Pourquoi choisir Caséo Chambéry</p>
+              <h2>Un showroom local, une équipe qui se déplace</h2>
               <p className="section-text why-text">
-                Vous ne choisissez pas une moustiquaire standard achetee a la
-                va-vite. Vous beneficiez d'un accompagnement local avec prise de
+                Vous ne choisissez pas une moustiquaire standard achetée à la
+                va-vite. Vous bénéficiez d’un accompagnement local avec prise de
                 mesures, fabrication sur mesure et pose professionnelle.
               </p>
 
               <div className="why-feature">
                 <div className="why-feature-label">Preuve sociale</div>
-                <div className="why-feature-title">
-                  Des avis clients consultables en ligne
-                </div>
+                <div className="why-feature-title">4,5/5 sur Google</div>
                 <p>
-                  Les retours clients rassurent avant un devis. Ils montrent la
-                  qualite de l'accueil, du conseil, de la pose et du suivi du
-                  projet.
+                  Les avis clients rassurent avant un devis. Ils montrent la
+                  qualité de l’accueil, du conseil, de la pose et du suivi du
+                  projet à Chambéry.
                 </p>
               </div>
             </div>
@@ -511,20 +507,20 @@ export default function Home() {
         <section className="section">
           <div className="container">
             <p className="section-tag">Tarif & devis</p>
-            <h2>Le prix d'une moustiquaire depend surtout de votre projet</h2>
+            <h2>Le prix d’une moustiquaire dépend surtout de votre projet</h2>
             <p className="section-text">
               Le tarif varie selon le type de moustiquaire, les dimensions, le
-              nombre d'ouvertures, les contraintes de pose et la finition
+              nombre d’ouvertures, les contraintes de pose et la finition
               choisie. Pour obtenir un prix juste, le plus efficace reste de
-              demander un devis gratuit aupres de Caseo Chambery.
+              demander un devis gratuit auprès de Caséo Chambéry.
             </p>
 
             <div className="price-box">
               <div>
-                <strong>Besoin d'un prix precis ?</strong>
+                <strong>Besoin d’un prix précis ?</strong>
                 <p>
                   Recevez un devis gratuit selon vos dimensions, votre type
-                  d'ouverture et le niveau de finition souhaite.
+                  d’ouverture et le niveau de finition souhaité.
                 </p>
               </div>
               <a href={devisUrl} className="btn btn-primary">
@@ -536,30 +532,30 @@ export default function Home() {
 
         <section className="section section-soft">
           <div className="container">
-            <p className="section-tag">Comment ca se passe</p>
-            <h2>De la demande a la pose, tout est cadre</h2>
+            <p className="section-tag">Comment ça se passe</p>
+            <h2>De la demande à la pose, tout est cadré</h2>
 
             <div className="process-grid">
               {[
                 {
                   n: "1",
                   title: "Vous nous contactez",
-                  desc: "Par telephone ou via la demande de devis. L'equipe qualifie votre besoin et vous oriente.",
+                  desc: "Par téléphone ou via la demande de devis. L’équipe qualifie votre besoin et vous oriente.",
                 },
                 {
                   n: "2",
-                  title: "Prise de mesures a domicile",
-                  desc: "Un technicien se deplace pour mesurer precisement vos ouvertures et vous conseiller.",
+                  title: "Prise de mesures à domicile",
+                  desc: "Un technicien se déplace pour mesurer précisément vos ouvertures et vous conseiller.",
                 },
                 {
                   n: "3",
                   title: "Fabrication sur mesure",
-                  desc: "Votre moustiquaire est realisee selon vos dimensions exactes et votre configuration.",
+                  desc: "Votre moustiquaire est réalisée selon vos dimensions exactes et votre configuration.",
                 },
                 {
                   n: "4",
-                  title: "Pose et reglages",
-                  desc: "Nous installons la moustiquaire et nous verifions son bon fonctionnement avant la fin de l'intervention.",
+                  title: "Pose et réglages",
+                  desc: "Nous installons la moustiquaire et nous vérifions son bon fonctionnement avant la fin de l’intervention.",
                 },
               ].map((s) => (
                 <article key={s.n} className="process-step">
@@ -577,14 +573,14 @@ export default function Home() {
             <p className="section-tag">Avis clients</p>
             <h2>Des retours visibles en ligne pour vous rassurer</h2>
             <p className="section-text">
-              Voici quelques retours publics consultables en ligne pour le
-              showroom Caseo Chambery.
+              Caséo Chambéry affiche une note de 4,5/5 sur Google. Voici
+              quelques avis clients récents.
             </p>
 
             <div className="reviews-header">
               <div className="reviews-badge">
-                <strong>Avis clients publics</strong>
-                <span>Caseo Chambery</span>
+                <strong>4,5/5 · 84 avis Google</strong>
+                <span>Caséo Chambéry</span>
               </div>
               <a
                 href={reviewsUrl}
@@ -607,7 +603,7 @@ export default function Home() {
                     <span>{review.rating}</span>
                   </div>
                   <p className="review-date">{review.date}</p>
-                  <p className="review-text">"{review.text}"</p>
+                  <p className="review-text">“{review.text}”</p>
                   <a
                     href={reviewsUrl}
                     target="_blank"
@@ -624,12 +620,12 @@ export default function Home() {
 
         <section id="zones" className="section section-dark">
           <div className="container">
-            <p className="section-tag dark-tag">Zone d'intervention</p>
-            <h2>Pose de moustiquaire a Chambery et dans les environs</h2>
+            <p className="section-tag dark-tag">Zone d’intervention</p>
+            <h2>Pose de moustiquaire à Chambéry et dans les environs</h2>
             <p className="section-text dark-text">
-              Caseo Chambery intervient pour la moustiquaire sur mesure a
-              Chambery, Voglans, La Motte-Servolex, Bassens, Cognin, Barberaz,
-              Aix-les-Bains et Le Bourget-du-Lac.
+              Caséo Chambéry intervient pour la moustiquaire sur mesure à
+              Chambéry, La Motte-Servolex, Bassens, Cognin, Barberaz,
+              Aix-les-Bains, Le Bourget-du-Lac et Voglans.
             </p>
 
             <div className="zones-grid">
@@ -645,9 +641,9 @@ export default function Home() {
         <section id="local" className="section">
           <div className="container">
             <p className="section-tag">Magasin & horaires</p>
-            <h2>Retrouvez Caseo Chambery au showroom</h2>
+            <h2>Retrouvez Caséo Chambéry au showroom</h2>
             <p className="section-text">
-              Tous les acces utiles sont ici : telephone, demande de devis,
+              Tous les accès utiles sont ici : téléphone, demande de devis,
               carte du magasin et horaires du showroom.
             </p>
 
@@ -659,7 +655,7 @@ export default function Home() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Carte Caseo Chambery"
+                  title="Carte Caséo Chambéry"
                 />
                 <div className="map-actions">
                   <a
@@ -668,7 +664,7 @@ export default function Home() {
                     rel="noreferrer"
                     className="btn btn-primary"
                   >
-                    Voir l'itineraire
+                    Voir l’itinéraire
                   </a>
                   <a href={devisUrl} className="btn btn-secondary">
                     Faire une demande de devis
@@ -679,13 +675,13 @@ export default function Home() {
               <div className="hours-card">
                 <div className="hours-head">
                   <p className="section-tag small-tag">Horaires showroom</p>
-                  <h3>Caseo Chambery</h3>
+                  <h3>Caséo Chambéry</h3>
                   <p>
                     Menuiserie Diffusion
                     <br />
                     381 Avenue de Villarcher
                     <br />
-                    73000 Chambery
+                    73000 Chambéry
                   </p>
                 </div>
 
@@ -713,25 +709,25 @@ export default function Home() {
 
         <section className="section">
           <div className="container seo-block">
-            <p className="section-tag">Moustiquaire Chambery</p>
+            <p className="section-tag">Moustiquaire Chambéry</p>
             <h2>
-              Installation de moustiquaire sur mesure pour fenetre,
-              porte-fenetre et baie vitree
+              Installation de moustiquaire sur mesure pour fenêtre,
+              porte-fenêtre et baie vitrée
             </h2>
             <p className="section-text">
-              Caseo Chambery vous accompagne pour votre projet de moustiquaire
-              sur mesure, de la prise de mesures a la pose finale. Nos solutions
-              sont adaptees aux fenetres, portes-fenetres et baies vitrees, avec
+              Caséo Chambéry vous accompagne pour votre projet de moustiquaire
+              sur mesure, de la prise de mesures à la pose finale. Nos solutions
+              sont adaptées aux fenêtres, portes-fenêtres et baies vitrées, avec
               un accompagnement local, un showroom accessible et une fabrication
-              sur mesure pour Chambery et ses environs.
+              sur mesure pour Chambéry et ses environs.
             </p>
           </div>
         </section>
 
         <section id="faq" className="section">
           <div className="container">
-            <p className="section-tag">FAQ moustiquaire Chambery</p>
-            <h2>Les questions frequentes</h2>
+            <p className="section-tag">FAQ moustiquaire Chambéry</p>
+            <h2>Les questions fréquentes</h2>
 
             <div className="faq-list">
               {faqs.map((f, i) => (
@@ -758,10 +754,10 @@ export default function Home() {
         <section className="cta-wrap">
           <div className="cta-box">
             <div>
-              <h2>Votre moustiquaire sur mesure a Chambery commence ici</h2>
+              <h2>Votre moustiquaire sur mesure à Chambéry commence ici</h2>
               <p>
-                Devis gratuit, prise de mesures a domicile, fabrication sur
-                mesure et pose par nos techniciens. Contactez Caseo Chambery
+                Devis gratuit, prise de mesures à domicile, fabrication sur
+                mesure et pose par nos techniciens. Contactez Caséo Chambéry
                 pour lancer votre projet.
               </p>
             </div>
@@ -789,20 +785,20 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="container footer-inner">
-          <span>© 2026 Caseo Chambery - Menuiserie Diffusion</span>
+          <span>© 2026 Caséo Chambéry - Menuiserie Diffusion</span>
           <div className="footer-links">
             <a href={showroomUrl} target="_blank" rel="noreferrer">
-              Page showroom Caseo Chambery
+              Page showroom Caséo Chambéry
             </a>
             <a href={devisUrl} target="_blank" rel="noreferrer">
-              Demande de devis Caseo
+              Demande de devis Caséo
             </a>
             <a
               href="https://www.caseo-maison.com/"
               target="_blank"
               rel="noreferrer"
             >
-              Site officiel Caseo
+              Site officiel Caséo
             </a>
           </div>
         </div>
