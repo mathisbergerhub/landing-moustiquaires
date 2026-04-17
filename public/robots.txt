@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://moustiquaire-chambery-caseo.vercel.app/sitemap.xml
